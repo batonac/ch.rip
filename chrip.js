@@ -97,9 +97,19 @@ async function setStatus(text) {
 ; (async function example() {
 
     let opt = new chrome.Options();
+    
+    const chromeBinaryPath = process.env.CHROME_BIN || 'google-chrome-stable';
+    const chromedriverPath = process.env.CHROMEDRIVER_PATH || 'chromedriver';
+    const service = new chrome.ServiceBuilder(chromedriverPath);
 
+    opt.setChromeBinaryPath(chromeBinaryPath);
     opt.addArguments("--load-extension=" + __dirname + "/ext");
-    driver = await new Builder().forBrowser(Browser.CHROME).setChromeOptions(opt).build()
+    
+    driver = await new Builder()
+        .forBrowser(Browser.CHROME)
+        .setChromeOptions(opt)
+        .setChromeService(service)
+        .build();
     try {
         await login(driver)
 

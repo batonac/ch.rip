@@ -56,3 +56,13 @@ Navigate your command line to the directory containing this readme then run
 ##### Step 2
 Delete the book folder if you don't need the individal chapters
 
+## Development
+
+If you're using Nix, you can enter a development shell with all dependencies:
+
+```bash
+nix-shell
+```
+
+This will provide nodejs, chrome, and ffmpeg automatically.
+
