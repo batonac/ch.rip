@@ -3,13 +3,13 @@
 pkgs.mkShell {
   buildInputs = with pkgs; [
     nodejs
-    google-chrome
+    chromium
     chromedriver
     ffmpeg
   ];
 
   shellHook = ''
-    export CHROME_BIN="${pkgs.google-chrome}/bin/google-chrome-stable"
+    export CHROME_BIN="${pkgs.chromium}/bin/chromium"
     export CHROMEDRIVER_PATH="${pkgs.chromedriver}/bin/chromedriver"
     export PATH="${pkgs.chromedriver}/bin:$PATH"
     

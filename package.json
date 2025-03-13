@@ -1,13 +1,13 @@
 {
   "dependencies": {
-    "chromedriver": "^132.0.2",
-    "selenium-webdriver": "^4.28.1"
+    "chromedriver": "^127.0.1",
+    "cli-progress": "^3.12.0",
+    "selenium-webdriver": "^4.23.0"
   },
   "name": "ch.rip",
   "description": "Chapter Rip (ch.rip) to download an optionally pack the audio files for the books you have purchased on chirp. It should work on Windows, Linux, and MacOS.",
   "version": "1.0.0",
   "main": "chrip.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
