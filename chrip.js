@@ -98,7 +98,7 @@ async function setStatus(text) {
 
     let opt = new chrome.Options();
     
-    const chromeBinaryPath = process.env.CHROME_BIN || 'google-chrome-stable';
+    const chromeBinaryPath = process.env.CHROME_BIN || 'chromium';
     const chromedriverPath = process.env.CHROMEDRIVER_PATH || 'chromedriver';
     const service = new chrome.ServiceBuilder(chromedriverPath);
 
